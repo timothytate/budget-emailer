@@ -39,8 +39,8 @@ total_expected_expenses = expected_expenses['Amount'].sum()
 expected_expenses.loc[len(expected_expenses)] = ['Total', "", "", total_expected_expenses]
 
 # Send the expected expenses to my email
-fromaddr = "timothy.w.tate@gmail.com"
-toaddr = "timothy.w.tate@gmail.com; noelle.d.tate@gmail.com"    
+fromaddr = "your_app@gmail.com"
+toaddr = "person1@gmail.com; person2@gmail.com"    
 msg = MIMEMultipart()
 msg['From'] = fromaddr  # From  email address
 msg['To'] = toaddr  # To email address
@@ -58,7 +58,7 @@ msg.attach(MIMEText(body, 'html'))
 
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login("timothy.w.tate", "iwruhopwglvrgjbt")
+server.login("your username", "your password")
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
