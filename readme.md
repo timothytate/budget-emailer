@@ -33,19 +33,19 @@ Run the makefile with the following command:
 
 Run the script on Linux with the following command:
 
-    python3 budget_tracker.py
+    python3 budgetemailer.py
 
 Run the script on Windows with the following command:
 
-    python budget_tracker.py
+    python budgetemailer.py
 
 ## Step 6: Schedule the script to run daily
 Schedule the script to run daily. I use cron on Linux to schedule the script to run daily at 8:00am. 
 
-    0 8 * * * cd /path/to/directory && python3 budget_tracker.py
+    0 8 * * * cd /path/to/directory && python3 budgetemailer.py
 
 Schedule the script to run daily on Windows. I use Task Scheduler to schedule the script to run daily at 8:00am.
 
-    schtasks /create /tn "Budget Tracker" /tr "C:\path\to\directory\python.exe C:\path\to\directory\budget_tracker.py" /sc daily /st 08:00:00
+    schtasks /create /tn "Budget Tracker" /tr "C:\path\to\directory\python.exe C:\path\to\directory\budgetemailer.py" /sc daily /st 08:00:00
 
 **Important Note** - the script and the excel file must be in the same directory.
